@@ -16,5 +16,5 @@ Crear una experiencia visual atractiva que:
 - Transmita calidad artesanal
 - Invite al usuario a descubrir y comprar productos
 
-##✨ "El Sabor de Brasil"
-#Entra aquí: https://danielsb07.github.io/brigadeiros/
+✨ "El Sabor de Brasil"
+Entra aquí: https://danielsb07.github.io/brigadeiros/
