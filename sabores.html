@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sabores - Dulce Saudades</title>
+  <meta name="description" content="Descubre todos los sabores de brigadeiros artesanales de Dulce Saudades.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Lato&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo-link">
+      <img src="assets/logo.png" alt="Dulce Saudades" class="logo-img">
+      <div>
+        <h1 class="logo-title">Dulce Saudades</h1>
+        <p class="logo-subtitle">Brigadeiros Artesanales</p>
+      </div>
+    </a>
+
+    <!-- CONTADOR CARRITO -->
+    <div class="contador-carrito">
+      🛒 <span id="cantidad-carrito">0</span>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle">☰</button>
+
+    <nav class="nav" id="nav">
+      <a href="index.html" class="nav-link">Inicio</a>
+      <a href="sabores.html" class="nav-link active">Sabores</a>
+      <a href="contacto.html" class="nav-link">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="page-hero">
+  <p class="hero-label">Cardápio</p>
+  <h1 class="page-hero-title">Nuestros Sabores</h1>
+  <p class="page-hero-desc">Brigadeiros artesanales hechos con los mejores ingredientes</p>
+</section>
+
+<!-- PRODUCTOS DINÁMICOS -->
+<section class="section bg-light">
+  <div class="container">
+    <div class="sabores-grid" id="productos"></div>
+  </div>
+</section>
+
+<!-- ⚔️ DUELO ELO -->
+<section class="section">
+  <div class="container text-center">
+    <h2 class="section-title">¿Cuál prefieres?</h2>
+
+    <div id="duelo" class="duelo-container">
+      <!-- JS lo llena -->
+    </div>
+  </div>
+</section>
+
+<div class="duelo-acciones">
+  <button onclick="verRanking()" class="btn-gold">🏆 Ver ranking</button>
+  <button onclick="verRecomendados()" class="btn-gold">✨ Recomendaciones</button>
+</div>
+
+<div id="resultado-elo"></div>
+
+<!-- 🛒 CARRITO -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title text-center">Tu Pedido</h2>
+
+    <div class="carrito-box">
+      <ul id="lista-carrito"></ul>
+
+      <p>
+        Productos en carrito: <span id="cantidad-carrito">0</span>
+      </p>
+
+      <p class="total">
+        Total: <span id="total">$0</span>
+      </p>
+
+      <div class="acciones-carrito">
+        <button onclick="vaciarCarrito()" class="btn-vaciar">Vaciar</button>
+        <button onclick="finalizarCompra()" class="btn-comprar">Pedir</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRECIOS -->
+<section class="section bg-cream-dark">
+  <div class="container text-center" style="max-width: 750px;">
+    <h2 class="section-title">Cajas de Brigadeiros</h2>
+
+    <div class="precios-grid">
+
+      <div class="precio-card">
+        <p class="precio-cantidad">4 unidades</p>
+        <p class="precio-valor">8.000 COP</p>
+        <button onclick="agregarCaja('Caja 4 brigadeiros', 8000)">Agregar</button>
+      </div>
+
+      <div class="precio-card">
+        <p class="precio-cantidad">6 unidades</p>
+        <p class="precio-valor">10.000 COP</p>
+        <button onclick="agregarCaja('Caja 6 brigadeiros', 10000)">Agregar</button>
+      </div>
+
+      <div class="precio-card">
+        <p class="precio-cantidad">12 unidades</p>
+        <p class="precio-valor">18.000 COP</p>
+        <button onclick="agregarCaja('Caja 12 brigadeiros', 18000)">Agregar</button>
+      </div>
+
+      <div class="precio-card">
+        <p class="precio-cantidad">20 unidades</p>
+        <p class="precio-valor">28.000 COP</p>
+        <button onclick="agregarCaja('Caja 20 brigadeiros', 28000)">Agregar</button>
+      </div>
+
+      <div class="precio-card">
+        <p class="precio-cantidad">30 unidades</p>
+        <p class="precio-valor">39.000 COP</p>
+        <button onclick="agregarCaja('Caja 30 brigadeiros', 39000)">Agregar</button>
+      </div>
+
+      <div class="precio-card">
+        <p class="precio-cantidad">50 unidades</p>
+        <p class="precio-valor">65.000 COP</p>
+        <button onclick="agregarCaja('Caja 50 brigadeiros', 65000)">Agregar</button>
+      </div>
+
+      <div class="precio-card">
+        <p class="precio-cantidad">80 unidades</p>
+        <p class="precio-valor">100.000 COP</p>
+        <button onclick="agregarCaja('Caja 80 brigadeiros', 100000)">Agregar</button>
+      </div>
+
+      <div class="precio-card">
+        <p class="precio-cantidad">100 unidades</p>
+        <p class="precio-valor">120.000 COP</p>
+        <button onclick="agregarCaja('Caja 100 brigadeiros', 120000)">Agregar</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2 class="cta-title">¡Haz tu pedido ahora!</h2>
+  <p class="cta-desc">Escríbenos por WhatsApp</p>
+  <button onclick="finalizarCompra()" class="btn-gold">
+    📱 Pedir ahora
+  </button>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="assets/logo.png" class="footer-logo">
+      <div>
+        <h3 class="footer-title">Dulce Saudades</h3>
+        <p class="footer-subtitle">Brigadeiros Artesanales</p>
+      </div>
+    </div>
+
+    <div class="footer-contact">
+      <p>📞 313 2306545</p>
+      <p>📷 @dulcesaudades</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Dulce Saudades
+  </div>
+</footer>
+
+<!-- MENU MOBILE -->
+<script>
+const menuToggle = document.getElementById('menuToggle');
+const nav = document.getElementById('nav');
+
+menuToggle.addEventListener('click', () => {
+  nav.classList.toggle('open');
+  menuToggle.textContent = nav.classList.contains('open') ? '✕' : '☰';
+});
+</script>
+
+<!-- SCRIPT PRINCIPAL -->
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Dulce Saudades</title>
+  <meta name="description" content="Contáctanos para pedir tus brigadeiros artesanales favoritos.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo-link">
+        <img src="assets/logo.png" alt="Dulce Saudades" class="logo-img">
+        <div>
+          <h1 class="logo-title">Dulce Saudades</h1>
+          <p class="logo-subtitle">Brigadeiros Artesanales</p>
+        </div>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+      <nav class="nav" id="nav">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="sabores.html" class="nav-link">Sabores</a>
+        <a href="contacto.html" class="nav-link active">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="page-hero">
+    <p class="hero-label">Escríbenos</p>
+    <h1 class="page-hero-title">Contáctanos Ahora</h1>
+    <p class="page-hero-desc">Estamos listos para atenderte y preparar tus brigadeiros favoritos</p>
+  </section>
+
+  <!-- Contacto Cards -->
+  <section class="section bg-light">
+    <div class="container" style="max-width: 650px;">
+      <div class="contacto-grid">
+        <a href="https://www.instagram.com/dulcesaudades/" target="_blank" rel="noopener noreferrer" class="contacto-card">
+          <div class="contacto-icon">📷</div>
+          <h3>Instagram</h3>
+          <p class="contacto-handle">@dulcesaudades</p>
+          <p class="contacto-cta">Contáctanos ahora →</p>
+        </a>
+        <a href="https://api.whatsapp.com/send/?phone=573132306545&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" class="contacto-card">
+          <div class="contacto-icon">💬</div>
+          <h3>WhatsApp</h3>
+          <p class="contacto-handle">313 2306545</p>
+          <p class="contacto-cta">Contáctanos ahora →</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="Dulce Saudades" class="footer-logo">
+        <div>
+          <h3 class="footer-title">Dulce Saudades</h3>
+          <p class="footer-subtitle">Brigadeiros Artesanales</p>
+        </div>
+      </div>
+      <div class="footer-contact">
+        <p>📞 313 2306545</p>
+        <p>📷 @dulcesaudades</p>
+        <p class="footer-tagline">Un bocado de Brasil para el alma 🇧🇷✨</p>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Dulce Saudades — Hechos con mucho cariño y sabor brasileño</div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('nav');
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+      menuToggle.textContent = nav.classList.contains('open') ? '✕' : '☰';
+    });
+  </script>
+
+</body>
+</html>
