@@ -17,4 +17,4 @@ Crear una experiencia visual atractiva que:
 - Invite al usuario a descubrir y comprar productos
 
 ✨ "El Sabor de Brasil"
-Entra aquí: https://danielsb07.github.io/brigadeiros/
+Entra: https://danielsb07.github.io/brigadeiros/
