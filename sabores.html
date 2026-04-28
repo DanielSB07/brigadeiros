@@ -15,19 +15,17 @@
 <header class="header" id="header">
   <div class="header-inner">
     <a href="index.html" class="logo-link">
-      <img src="assets/logo.png" alt="Dulce Saudades" class="logo-img">
-      <div>
-        <h1 class="logo-title">Dulce Saudades</h1>
-        <p class="logo-subtitle">Brigadeiros Artesanales</p>
-      </div>
-    </a>
+  <img src="assets/logo.png" alt="Dulce Saudades" class="logo-img">
+  <div>
+    <h1 class="logo-title">Dulce Saudades</h1>
+    <p class="logo-subtitle">Brigadeiros Artesanales</p>
+  </div>
+</a>
 
-    <!-- CONTADOR CARRITO -->
-    <div class="contador-carrito">
-      🛒 <span id="cantidad-carrito">0</span>
-    </div>
-
-    <button class="menu-toggle" id="menuToggle">☰</button>
+<!-- 🔥 AFUERA DEL LINK -->
+<div class="carrito-icono" onclick="toggleCarrito()">
+  🛒 <span id="cantidad-carrito">0</span>
+</div>
 
     <nav class="nav" id="nav">
       <a href="index.html" class="nav-link">Inicio</a>
@@ -69,29 +67,6 @@
 
 <div id="resultado-elo"></div>
 
-<!-- 🛒 CARRITO -->
-<section class="section">
-  <div class="container">
-    <h2 class="section-title text-center">Tu Pedido</h2>
-
-    <div class="carrito-box">
-      <ul id="lista-carrito"></ul>
-
-      <p>
-        Productos en carrito: <span id="cantidad-carrito">0</span>
-      </p>
-
-      <p class="total">
-        Total: <span id="total">$0</span>
-      </p>
-
-      <div class="acciones-carrito">
-        <button onclick="vaciarCarrito()" class="btn-vaciar">Vaciar</button>
-        <button onclick="finalizarCompra()" class="btn-comprar">Pedir</button>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- PRECIOS -->
 <section class="section bg-cream-dark">
@@ -173,7 +148,7 @@
     </div>
 
     <div class="footer-contact">
-      <p>📞 324 5601062</p>
+      <p>📞 313 2306545</p>
       <p>📷 @dulcesaudades</p>
     </div>
   </div>
@@ -183,19 +158,49 @@
   </div>
 </footer>
 
-<!-- MENU MOBILE -->
-<script>
-const menuToggle = document.getElementById('menuToggle');
-const nav = document.getElementById('nav');
-
-menuToggle.addEventListener('click', () => {
-  nav.classList.toggle('open');
-  menuToggle.textContent = nav.classList.contains('open') ? '✕' : '☰';
-});
-</script>
-
 <!-- SCRIPT PRINCIPAL -->
 <script src="script.js"></script>
+<!-- 🛒 SIDEBAR CARRITO -->
+<div id="sidebar-carrito" class="sidebar-carrito">
 
+  <div class="sidebar-header">
+    <h3>Tu Pedido</h3>
+    <button onclick="toggleCarrito()">✕</button>
+  </div>
+
+  <ul id="lista-carrito"></ul>
+
+ <div class="total-linea">
+  <p>Total: <span id="total">$0</span></p>
+  <button onclick="vaciarCarrito()" class="btn-vaciar-mini">Vaciar</button>
+</div>
+
+  <div class="acciones-carrito">
+    <button onclick="vaciarCarrito()" class="btn-vaciar-mini">Vaciar</button>
+    <button onclick="finalizarCompra()" class="btn-whatsapp">
+  <img src="assets/whatsapp.png" class="icon-wsp">
+  Comprar por WhatsApp
+</button>
+  </div>
+
+  <!-- 💳 PAGOS -->
+<div class="metodos-pago">
+  <h4>Selecciona tu método de pago</h4>
+
+  <div class="pago-opciones">
+    <button class="pago-btn active" onclick="seleccionarPago(this)">
+      📱 Nequi
+    </button>
+
+    <button class="pago-btn" onclick="seleccionarPago(this)">
+      🏦 PSE
+    </button>
+
+    <button class="pago-btn" onclick="seleccionarPago(this)">
+      💳 Daviplata
+    </button>
+  </div>
+</div>
+</div>
 </body>
 </html>
